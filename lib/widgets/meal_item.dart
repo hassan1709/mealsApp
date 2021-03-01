@@ -9,7 +9,6 @@ class MealItem extends StatelessWidget {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
-  final Function removeItem;
 
   MealItem({
     @required this.id,
@@ -18,7 +17,6 @@ class MealItem extends StatelessWidget {
     @required this.duration,
     @required this.affordability,
     @required this.complexity,
-    @required this.removeItem,
   });
 
   String get complexityText {
@@ -57,7 +55,7 @@ class MealItem extends StatelessWidget {
     //The function after ".then" executes when the page pops only
     Navigator.of(context).pushNamed(MealDetailScreen.routeName, arguments: id).then((result) {
       if (result != null) {
-        removeItem(result);
+        // removeItem(result);
       }
     });
   }
